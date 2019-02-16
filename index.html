@@ -31,6 +31,13 @@ body{
 #website_title{
   font-size: 3em;
   font-family: 'Bungee Inline', cursive;
+  width: 50%;
+}
+#website_title:hover{
+  transition: 1s;
+  color:white;
+  background-color: black;
+  cursor: pointer;
 }
 #navbar{
   padding:0;
@@ -43,6 +50,14 @@ body{
   padding: 0.2em 0.3em;
   font-size: 1em;
 }
+#navbar li:hover{
+  cursor: pointer;
+  transition: 0.5s;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+#robots:hover{background-color: #f44256;}#plants:hover{background-color: #f49b41;}#creatures:hover{background-color: #f4d941;}#creations:hover{background-color: #61cc55;}
+#crustaceans:hover{background-color: #54cccc;}#procrastinations:hover{background-color: #5470cc;}#bio:hover{background-color: #684593;}#contact:hover{background-color: #dd77c2;}
 #homepage_content{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -55,6 +70,10 @@ body{
   display: inline-block;
   border: 1em solid black;
   width: 80%;
+}
+#homepage_img:hover{
+  transition: 0.5;
+  border-style: dashed;
 }
 #homepage_text{
   grid-column: 2;
@@ -84,6 +103,7 @@ body{
   margin-right: 1em;
 }
 </style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
     <div id="content">
@@ -107,11 +127,21 @@ body{
 <p>Welcome to my portfolio! I hope you enjoy having a look around.</p>
 <p>This is a collection of my projects, art, hobbies, ideas, thoughts, and creations from the year of roughly 2013 up to the present. </p>
 <p class="emphasis">Happy Browsing!</p>
-<p id="redesign">Redesigned February 2019. Previous iterations of this portfolio:</p>
+<p id="redesign">Redesigned February 2019. Previous versions of this portfolio:</p>
 <center><ul id="back-issues"><li>2014-2015</li><li>2016</li><li>2017-2018</li></ul></center>
   </div>
   </div>
   <p>&#169; Sophia Davis 2019</p>
   </div>
+  <script>
+  $("#homepage_img").mouseover( function(){
+    $(this).attr("src","img/homepage.gif");
+
+    $("#homepage_img").mouseout(function(){
+      $(this).attr("src","img/homepage.png");
+    });
+  });
+
+  </script>
 </body>
 </html>
