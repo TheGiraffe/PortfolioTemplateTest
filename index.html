@@ -121,10 +121,20 @@ min-height: 100%;
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-  <div id="BGdiv">
-  <video loop muted autoplay preload id="BGvideo">
-    <source id ="dakine" src="img/bg7.mp4" type="video/mp4">
+  <div id="BG2">
+  <video loop muted autoplay preload="auto" id="BGvideo">
+    <source id ="dakine" src="img/bg2.mp4" type="video/mp4">
   </video>
+</div>
+  <div id="BG3">
+  <video loop muted autoplay preload="auto" id="BGvideo">
+    <source id ="dakine" src="img/bg3.mp4" type="video/mp4">
+  </video>
+</div>
+<div id="BG0">
+<video loop muted autoplay preload="auto" id="BGvideo">
+  <source id ="dakine" src="img/bg7.mp4" type="video/mp4">
+</video>
 </div>
     <div id="content">
 
@@ -154,48 +164,20 @@ min-height: 100%;
   <p>&#169; Sophia Davis 2019</p>
   </div>
   <script>
-$("#robots").mouseover(function(){
-  $("#BGdiv").load("js/bgvid.html #vid1");
-});
-$("#plants").mouseover(function(){
-  $("#BGdiv").fadeOut("100");
-  $("#BGdiv").load("js/bgvid.html #vid2")
-  $("#BGdiv").fadeIn("100");
-});
-$("#creatures").mouseover(function(){
-  $("#BGdiv").fadeOut("100");
-  $("#BGdiv").load("js/bgvid.html #vid3")
-  $("#BGdiv").fadeIn("100");
-});
-$("#creations").mouseover(function(){
-  $("#BGdiv").fadeOut("100");
-  $("#BGdiv").load("js/bgvid.html #vid4")
-  $("#BGdiv").fadeIn("100");
-});
-$("#crustaceans").mouseover(function(){
-  $("#BGdiv").fadeOut("100");
-  $("#BGdiv").load("js/bgvid.html #vid5")
-  $("#BGdiv").fadeIn("100");
-});
-$("#Procrastinations").mouseover(function(){
-  $("#BGdiv").fadeOut("100");
-  $("#BGdiv").load("js/bgvid.html #vid6")
-  $("#BGdiv").fadeIn("100");
-});
-$("#bio").mouseover(function(){
-  $("#BGdiv").fadeOut("100");
-  $("#BGdiv").load("js/bgvid.html #vid7")
-  $("#BGdiv").fadeIn("100");
-});
-$("#contact").mouseover(function(){
-  $("#BGdiv").fadeOut("100");
-  $("#BGdiv").load("js/bgvid.html #vid8")
-  $("#BGdiv").fadeIn("100");
-});
+  $("#procrastinations").mouseover(function(){
+    $("#BG2").fadeIn();
+    $("#BG0").hide();
+    $("#BG3").hide();
+  });
+  $("#creatures").mouseover(function(){
+    $("#BG3").fadeIn();
+    $("#BG0").hide();
+    $("#BG2").hide();
+  });
 $("#navbar li").mouseout(function(){
-  $("#BGdiv").fadeOut("100");
-  $("#BGdiv").load("js/bgvid.html #vid7");
-  $("#BGdiv").fadeIn("100");
+  $("#BG0").fadeIn();
+  $("#BG2").hide();
+  $("#BG3").hide();
 });
   </script>
 
