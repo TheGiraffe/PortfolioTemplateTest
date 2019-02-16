@@ -6,29 +6,104 @@ But this portfolio website is gonna be epic, hopefully!
 I don't know what's wrong with all the storage stuff on my Mac. There's some hidden thing that's taking up gobs of space.
 -->
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Welcome To Sophia's Portfolio!</title>
+ <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Cutive+Mono|Sacramento|Staatliches" rel="stylesheet">
 <style>
 body{
-  background-image: url("img/bg.gif");
+  background-image: url("img/giphy.gif");
   background-size: cover;
   background-repeat: no-repeat;
+  font-size: 1.5vw;
+  font-family: 'Cutive Mono', monospace;
+}
+#content{
+  left:10%;
+  right:10%;
+  position: absolute;
+  width: 80%;
+}
+#website_title{
+  font-size: 3em;
+  font-family: 'Bungee Inline', cursive;
+}
+#navbar li{
+  font-family: 'Staatliches', cursive;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 0.2em 0.3em;
+  font-size: 1em;
+}
+#homepage_content{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(10px, auto);
+  grid-gap: 0em;
+  background-color: rgba(255,255,255,0.5);
+}
+#homepage_img{
+  grid-column: 1;
+  display: inline-block;
+  border: 1em solid black;
+  width: 80%;
+}
+#homepage_text{
+  grid-column: 2;
+  display: inline-block;
+  font-size:0.9em;
+  margin-right: 1.6em;
+  margin-left:-1em;
+  margin-top:1.5em;
+  margin-bottom:1em;
+}
+.emphasis{
+  font-family: 'Sacramento', cursive;
+  font-size: 1.5em;
+  margin:0;
+}
+#hello{
+    margin-bottom:-0.5em;
+}
+#redesign{
+  font-size: 0.7em;
+}
+#back-issues{
+  padding:0;
+}
+#back-issues li{
+  display: inline-block;
+  margin-right: 1em;
 }
 </style>
 </head>
 <body>
-  <body>
+    <div id="content">
+
+      <center>
     <div id="website_title">Sophia Davis</div>
-    <ul>
-      <li>Robots</li>
-      <li>Plants</li>
-      <li>Creatures</li>
-      <li>Creations</li>
-      <li>Crustaceans</li>
-      <li>Educations</li>
-      <li>Animations</li>
-      <li>Bio</li>
-      <li>Get In Touch!</li>
+    <ul id="navbar">
+      <li id="robots">Robots</li>
+      <li id="plants">Plants</li>
+      <li id="creatures">Creatures</li>
+      <li id="creations">Creations</li>
+      <li id="crustaceans">Crustaceans</li>
+      <li id="procrastinations">Procrastinations</li>
+      <li id="bio">Bio</li>
+      <li id="contact">Get In Touch!</li>
     </ul>
-  </body>
+  </center>
+  <div id="homepage_content">
+  <img id="homepage_img" src="img/homepage.png">
+  <div id="homepage_text"><p class="emphasis" id="hello">Hello, World!<p>
+<p>Welcome to my portfolio! I hope you enjoy having a look around.</p>
+<p>This is a collection of my projects, art, hobbies, ideas, thoughts, and creations from the year of roughly 2013 up to the present. </p>
+<p class="emphasis">Happy Browsing!</p>
+<p id="redesign">Redesigned February 2019. Previous iterations of this portfolio:</p>
+<center><ul id="back-issues"><li>2014-2015</li><li>2016</li><li>2017-2018</li></ul></center>
+  </div>
+  </div>
+  <p>&#169; Sophia Davis 2019</p>
+  </div>
 </body>
 </html>
