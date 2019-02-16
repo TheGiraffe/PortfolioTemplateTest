@@ -13,15 +13,23 @@ I don't know what's wrong with all the storage stuff on my Mac. There's some hid
  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Cutive+Mono|Sacramento|Staatliches" rel="stylesheet">
 <style>
 body{
-  background-color:black;
-  background: url("img/bg.gif") no-repeat center center fixed;
+  background-color: white;
   font-size: 1.5vw;
   font-family: 'Cutive Mono', monospace;
+/*background: url("img/bg.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
- background-size: cover;
+ background-size: cover;*/
 }
+#BGvideo{
+position: fixed;
+left:0;
+top:0;
+min-width: 100%;
+min-height: 100%;
+}
+
 #content{
   left:10%;
   right:10%;
@@ -107,6 +115,11 @@ body{
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
+  <div id="BGdiv">
+  <video loop muted autoplay preload id="BGvideo">
+    <source id ="dakine" src="img/bg2.mp4" type="video/mp4">
+  </video>
+</div>
     <div id="content">
 
       <center>
@@ -135,14 +148,21 @@ body{
   <p>&#169; Sophia Davis 2019</p>
   </div>
   <script>
-  $("#homepage_img").mouseover( function(){
+$("#robots").mouseover(function(){
+  $("#BGdiv").load("js/bgvid.html #vid1");
+});
+$("#robots").mouseout(function(){
+  $("#BGdiv").load("js/bgvid.html #vid0");
+});
+  </script>
+  <script>
+  $("#homepage_img").mouseover(function(){
     $(this).attr("src","img/homepage.gif");
 
     $("#homepage_img").mouseout(function(){
       $(this).attr("src","img/homepage.png");
     });
   });
-
   </script>
 </body>
 </html>
