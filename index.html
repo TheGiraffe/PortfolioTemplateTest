@@ -6,6 +6,12 @@ But this portfolio website is gonna be epic, hopefully!
 I don't know what's wrong with all the storage stuff on my Mac. There's some hidden thing that's taking up gobs of space.
 -->
 <head>
+<link rel="preload" href="img/bg2.mp4" as="video">
+<link rel="preload" href="img/bg4.mp4" as="video">
+  <link rel="preload" href="img/bg7.mp4" as="video">
+
+  <link rel="preload" href="img/homepage.png" as="image">
+  <link rel="preload" href="img/homepage.gif" as="image">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Cache-Control" content="no-store" />
     <meta charset="UTF-8">
@@ -13,7 +19,7 @@ I don't know what's wrong with all the storage stuff on my Mac. There's some hid
  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Cutive+Mono|Sacramento|Staatliches" rel="stylesheet">
 <style>
 body{
-  background-color: white;
+  background-color: rgb(210,210,210);
   font-size: 1.5vw;
   font-family: 'Cutive Mono', monospace;
 /*background: url("img/bg.gif") no-repeat center center fixed;
@@ -117,7 +123,7 @@ min-height: 100%;
 <body>
   <div id="BGdiv">
   <video loop muted autoplay preload id="BGvideo">
-    <source id ="dakine" src="img/bg2.mp4" type="video/mp4">
+    <source id ="dakine" src="img/bg7.mp4" type="video/mp4">
   </video>
 </div>
     <div id="content">
@@ -151,10 +157,48 @@ min-height: 100%;
 $("#robots").mouseover(function(){
   $("#BGdiv").load("js/bgvid.html #vid1");
 });
-$("#robots").mouseout(function(){
-  $("#BGdiv").load("js/bgvid.html #vid0");
+$("#plants").mouseover(function(){
+  $("#BGdiv").fadeOut("100");
+  $("#BGdiv").load("js/bgvid.html #vid2")
+  $("#BGdiv").fadeIn("100");
+});
+$("#creatures").mouseover(function(){
+  $("#BGdiv").fadeOut("100");
+  $("#BGdiv").load("js/bgvid.html #vid3")
+  $("#BGdiv").fadeIn("100");
+});
+$("#creations").mouseover(function(){
+  $("#BGdiv").fadeOut("100");
+  $("#BGdiv").load("js/bgvid.html #vid4")
+  $("#BGdiv").fadeIn("100");
+});
+$("#crustaceans").mouseover(function(){
+  $("#BGdiv").fadeOut("100");
+  $("#BGdiv").load("js/bgvid.html #vid5")
+  $("#BGdiv").fadeIn("100");
+});
+$("#Procrastinations").mouseover(function(){
+  $("#BGdiv").fadeOut("100");
+  $("#BGdiv").load("js/bgvid.html #vid6")
+  $("#BGdiv").fadeIn("100");
+});
+$("#bio").mouseover(function(){
+  $("#BGdiv").fadeOut("100");
+  $("#BGdiv").load("js/bgvid.html #vid7")
+  $("#BGdiv").fadeIn("100");
+});
+$("#contact").mouseover(function(){
+  $("#BGdiv").fadeOut("100");
+  $("#BGdiv").load("js/bgvid.html #vid8")
+  $("#BGdiv").fadeIn("100");
+});
+$("#navbar li").mouseout(function(){
+  $("#BGdiv").fadeOut("100");
+  $("#BGdiv").load("js/bgvid.html #vid7");
+  $("#BGdiv").fadeIn("100");
 });
   </script>
+
   <script>
   $("#homepage_img").mouseover(function(){
     $(this).attr("src","img/homepage.gif");
