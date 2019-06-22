@@ -4,14 +4,183 @@
 <title>WOW!</title>
 <style>
 body{
-  background: url("img/stars.gif") no-repeat center center fixed;
+  background: url("img/starrybackground.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
  background-size: cover;
+ color:white;
+ font-size: 100px;
+ margin-top:15%;
+}
+#text{
+  animation-duration: 20s;
+  animation-name:textappear;
+  opacity:0;
+  font-size:0;
+}
+@keyframes textappear{
+  0%{
+    opacity:0;
+    font-size:100px;
+  }
+  5%{
+    opacity:1;
+  }
+  95%{
+    opacity:1;
+  }
+  100%{
+    opacity:0;
+    font-size:100px;
+  }
+}
+#text span{
+animation-duration:10s;
+animation-delay: 1s;
+animation-name: rainbow;
+opacity: 0;
+}
+@keyframes rainbow {
+  0%{
+    opacity:0;
+  }
+    10%{
+    color:red;
+    opacity:1;
+  }
+  20%{
+    color:orange;
+  }
+  30%{
+    color: yellow;
+  }
+  40%{
+    color:green;
+  }
+  50%{
+    color:blue;
+  }
+  60%{
+    color:purple;
+  }
+  70%{
+    color:white;
+  }
+  95%{
+    opacity:1;
+  }
+  100%{
+    opacity:0;
+  }
+}
+#text2{
+  animation-name: textappear;
+  animation-duration: 11s;
+  animation-delay: 9s;
+  opacity:0;
+  font-size: 0;
+}
+#text2 span{
+  animation-duration:10s;
+  animation-name: rainbow;
+  animation-delay: 10s;
+  opacity:0;
+}
+#text3{
+  animation-name: textappear2;
+  animation-duration: 10s;
+  animation-delay: 20s;
+  opacity:0;
+  font-size: 0;
+}
+#text3 span{
+  animation-duration:10s;
+  animation-name: rainbow;
+  animation-delay: 20s;
+  opacity:0;
+}
+#text4{
+  animation-duration:7s;
+  animation-iteration-count: infinite;
+  animation-name: rainbow2;
+  animation-delay: 27s;
+  font-size: 0;
+}
+@keyframes rainbow2 {
+    0%{
+    color:red;
+    font-size: 100px;
+    }
+
+  20%{
+    color:orange;
+  }
+  40%{
+    color: yellow;
+  }
+  60%{
+    color:green;
+  }
+  80%{
+    color:blue;
+  }
+  98%{
+    color:purple;
+
+  }
+  100%{
+    color: red;
+      font-size:100px;
+  }
+}
+@keyframes textappear2{
+  0%{
+    opacity:0;
+    font-size:100px;
+  }
+  5%{
+    opacity:1;
+  }
+  95%{
+    opacity:1;
+    font-size:100px;
+  }
+  100%{
+    opacity:0;
+
+  }
+}
+#answer{
+  animation-duration:2s;
+  animation-delay: 30s;
+  animation-name: inputappear;
+  animation-iteration-count: infinite;
+  opacity:0;
+  width: 25%;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+}
+@keyframes inputappear {
+  0%{
+    opacity: 1;
+    border: solid white 2px;
+  }
+  100%{
+    opacity: 1;
+    border: dashed white 2px;
+  }
 }
 </style>
 </head>
 <body>
+  <center>
+<div id="text">Hello,<span> World!</span></div>
+<div id="text2">I am <span>Sophia.</span></div>
+<div id="text3">My <span> Question </span> For You Is:</div>
+<div id="text4">What makes you feel happy?</div>
+<input id="answer"></input>
+</center>
 </body>
 </html>
