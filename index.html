@@ -6,9 +6,12 @@ But this portfolio website is gonna be epic, hopefully!
 I don't know what's wrong with all the storage stuff on my Mac. There's some hidden thing that's taking up gobs of space.
 -->
 <head>
+
 <link rel="preload" href="img/bg2.mp4" as="video">
-<link rel="preload" href="img/bg4.mp4" as="video">
-  <link rel="preload" href="img/bg7.mp4" as="video">
+<link rel="preload" href="img/bg3.mp4" as="video">
+
+<link rel="preload" href="img/bg7.mp4" as="video">
+<link rel="preload" href="img/bg8.mp4" as="video">
 
   <link rel="preload" href="img/homepage.png" as="image">
   <link rel="preload" href="img/homepage.gif" as="image">
@@ -22,11 +25,14 @@ body{
   background-color: rgb(210,210,210);
   font-size: 1.5vw;
   font-family: 'Cutive Mono', monospace;
-/*background: url("img/bg.gif") no-repeat center center fixed;
-  -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;*/
+  background: url("img/bg6.gif") no-repeat center center fixed;
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+#BG6{
+background-color: white;
 }
 #BGvideo{
 position: fixed;
@@ -117,10 +123,16 @@ min-height: 100%;
   display: inline-block;
   margin-right: 1em;
 }
+
 </style>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
+  <div id="BG1">
+  <video loop muted autoplay preload="auto" id="BGvideo">
+    <source id ="dakine" src="img/bg1.mp4" type="video/mp4">
+  </video>
+</div>
   <div id="BG2">
   <video loop muted autoplay preload="auto" id="BGvideo">
     <source id ="dakine" src="img/bg2.mp4" type="video/mp4">
@@ -131,10 +143,22 @@ min-height: 100%;
     <source id ="dakine" src="img/bg3.mp4" type="video/mp4">
   </video>
 </div>
+<div id="BG7">
+<video loop muted autoplay preload="auto" id="BGvideo">
+  <source id ="dakine" src="img/bg7.mp4" type="video/mp4">
+</video>
+</div>
+<div id="BG8">
+<video loop muted autoplay preload="auto" id="BGvideo">
+  <source id ="dakine" src="img/bg8.mp4" type="video/mp4">
+</video>
+</div>
 <div id="BG0">
 <video loop muted autoplay preload="auto" id="BGvideo">
   <source id ="dakine" src="img/bg7.mp4" type="video/mp4">
 </video>
+</div>
+<div id="BG6">
 </div>
     <div id="content">
 
@@ -164,20 +188,53 @@ min-height: 100%;
   <p>&#169; Sophia Davis 2019</p>
   </div>
   <script>
-  $("#procrastinations").mouseover(function(){
+  $("#plants").mouseover(function(){
     $("#BG2").fadeIn();
     $("#BG0").hide();
+    $("#BG1").hide();
     $("#BG3").hide();
+    $("#BG7").hide();
+    $("#BG8").hide();
   });
   $("#creatures").mouseover(function(){
     $("#BG3").fadeIn();
     $("#BG0").hide();
+    $("#BG1").hide();
     $("#BG2").hide();
+    $("#BG7").hide();
+    $("#BG8").hide();
+  });
+  $("#procrastinations").mouseover(function(){
+    $("#BG0").hide();
+    $("#BG1").hide();
+    $("#BG2").hide();
+    $("#BG3").hide();
+    $("#BG7").hide();
+    $("#BG8").hide();
+  });
+  $("#bio").mouseover(function(){
+    $("#BG7").fadeIn();
+    $("#BG0").hide();
+    $("#BG1").hide();
+    $("#BG2").hide();
+    $("#BG3").hide();
+    $("#BG8").hide();
+  });
+  $("#contact").mouseover(function(){
+    $("#BG8").fadeIn();
+    $("#BG0").hide();
+    $("#BG1").hide();
+    $("#BG2").hide();
+    $("#BG3").hide();
+    $("#BG7").hide();
   });
 $("#navbar li").mouseout(function(){
   $("#BG0").fadeIn();
+  $("#BG1").hide();
   $("#BG2").hide();
   $("#BG3").hide();
+  $("#BG7").hide();
+  $("#BG8").hide();
 });
   </script>
 
